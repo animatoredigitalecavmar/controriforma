@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="it">
-<head <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2c3e50">
-<link rel="icon" href="icons/icon-192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="icons/icon-512.png">
-
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js")
-      .then(() => console.log("Service Worker registrato"))
-      .catch(err => console.error("Errore SW:", err));
-  }
-</script>
->
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>La controriforma, ovvero come la Chiesa Cattolica reagisce alla Riforma Protestante</title>
+
+  <!-- Manifest e icone -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2c3e50">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/icon-512.png">
+
+  <!-- Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrato"))
+        .catch(err => console.error("Errore SW:", err));
+    }
+  </script>
+
   <style>
     :root{
       --bg:#f7f8fb; --card:#ffffff; --muted:#555; --accent:#2c3e50;
